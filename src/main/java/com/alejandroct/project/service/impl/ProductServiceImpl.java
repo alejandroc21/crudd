@@ -1,6 +1,7 @@
 package com.alejandroct.project.service.impl;
 
 import com.alejandroct.project.exception.ProductNotFoundException;
+import com.alejandroct.project.mapper.Mapper;
 import com.alejandroct.project.mapper.impl.ProductMapper;
 import com.alejandroct.project.model.dto.ProductDto;
 import com.alejandroct.project.model.entity.Product;
@@ -15,7 +16,7 @@ import java.util.Optional;
 public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
-    private final ProductMapper productMapper;
+    private final Mapper<Product, ProductDto> productMapper;
 
     public ProductServiceImpl(ProductRepository productRepository, ProductMapper productMapper){
         this.productRepository = productRepository;
